@@ -1,14 +1,14 @@
-def LongestCommonPrefix(array):
+def LongestCommonPrefix(strs):
 
-    if len(array) < 1:
+    if len(strs) < 1:
         return ""
-    if len(array) == 1:
-        return array[0]
+    if len(strs) == 1:
+        return strs[0]
 
-    word_compute = array.pop()
+    word_compute = strs.pop()
     store = ""
 
-    for word in array:
+    for word in strs:
         small = len(word) if (word < word_compute) else len(word_compute)
         for i in range(small):
             if word[i].lower() == word_compute[i].lower():
