@@ -1,4 +1,8 @@
 class Node():
+
+    def __str__(self):
+        return " " + str(self.data)
+    
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -59,13 +63,45 @@ class LinkedList():
             node = node.next
         
         return count
-            
 
+    def remove_duplicated(self):
+        node = self.head
+        dic = {}
+        anterior = node
+        
+        while node != None:
+            if node.data in dic:
+                anterior.set_next(node.next)
+            else:
+                dic[node.data] = 1
+                anterior = node
+
+            node = node.next
+
+    def nto_last(self,n):
+        node = self.head
+        to_last = []
+        flag = False
+
+        while node != None:
+            if node.data == n:
+                flag = True
+            if flag:
+                to_last.append(node)
+                print(node.data)
+            node = node.next
+
+        return to_last
+            
 
 linked = LinkedList()
 linked.append(1)
 linked.append(2)
 linked.append(3)
+linked.append(3)
 linked.append(4)
+linked.append(5)
+linked.append(6)
+linked.remove_duplicated()
+linked.nto_last(3)
 linked.traverse()
-print(linked.size())
