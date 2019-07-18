@@ -92,16 +92,32 @@ class LinkedList():
             node = node.next
 
         return to_last
+
+    def reversed(self):
+        
+        node = self.head
+        lista = [None]
+
+        while node != None:
+            lista.append(node)
+            node = node.next
+
+        new_head = LinkedList(lista.pop(-1))
+
+        for i in range(len(lista)-1,0,-1):
+            new_head.append(lista[i])            
+        
+        return new_head
+
+
             
 
 linked = LinkedList()
 linked.append(1)
 linked.append(2)
 linked.append(3)
-linked.append(3)
 linked.append(4)
 linked.append(5)
 linked.append(6)
-linked.remove_duplicated()
-linked.nto_last(3)
-linked.traverse()
+lista = linked.reversed()
+print(lista.traverse())
