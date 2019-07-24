@@ -1,4 +1,4 @@
- class Stack:
+class Stack:
 
     def __init__(self):
         self.stack = []
@@ -27,11 +27,27 @@
     def show(self):
         return self.stack[::-1]
 
+    def popAlmacen(self,numero):
+        if self.peak() == numero:
+            return self.pop()
+
+        aux = Stack()
+        for i in range(self.size()):
+            if self.peak() != numero:
+                aux.push(self.pop())
+            else:
+                pop = self.pop()
+        
+        for i in range(aux.size()):
+            self.push(aux.pop())
+        
+        return pop
+
 pila = Stack()
 pila.push(1)
 pila.push(2)
 pila.push(3)
 pila.push(4)
 pila.push(5)
-pila.pop()
+pila.popAlmacen(3)
 print(pila.show())
