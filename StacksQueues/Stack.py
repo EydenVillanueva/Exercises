@@ -43,11 +43,12 @@ class Stack:
         
         return pop
 
-pila = Stack()
-pila.push(1)
-pila.push(2)
-pila.push(3)
-pila.push(4)
-pila.push(5)
-pila.popAlmacen(3)
-print(pila.show())
+if __name__ == "__main__":
+    pila = Stack()
+    pila.push(1)
+    pila.push(2)
+    pila.push(3)
+    pila.push(4)
+    pila.push(5)
+    pila.popAlmacen(3)
+    print(pila.show())
