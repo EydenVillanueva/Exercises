@@ -29,4 +29,4 @@ def decode_string(encode):
 
 
 if __name__ == "__main__":
-    print(decode_string('3[ab]0[c]1[e]'))
+    print(decode_string('5[a]0[c]1[e]'))
