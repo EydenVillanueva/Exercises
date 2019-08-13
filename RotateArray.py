@@ -1,4 +1,3 @@
-
 def rotate(nums, k):
     if k <= 0:
         return 0

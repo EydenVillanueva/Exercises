@@ -23,4 +23,4 @@ def pivotIndex(array):
         return indexs[0]
 
 if __name__ == "__main__":
-    print(pivotIndex([2,3,5,4,1]))
+    print(pivotIndex([1,1,1]))

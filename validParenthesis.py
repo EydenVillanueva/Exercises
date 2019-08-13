@@ -15,8 +15,7 @@ def isValid(s):
             return False
     if registro.size() == 0:
         return True
-    else:
-        return False
+    return False
     
     
 
