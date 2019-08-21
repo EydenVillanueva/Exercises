@@ -1,3 +1,4 @@
+#Medium
 from StacksQueues.Stack import Stack
 
 def minAdd(s):
