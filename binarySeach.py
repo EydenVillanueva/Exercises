@@ -3,7 +3,7 @@ def binarySearch(array,target):
     rigth = len(array) - 1
   
     while left <= rigth: 
-        mid = int(left + (rigth - left)/2); 
+        mid = int(left + (rigth - left)/2)
           
         if array[mid] == target: 
             return mid 
