@@ -34,5 +34,5 @@ if __name__ == "__main__":
     print ("Given array is", end="\n")  
     print(arr)
     mergeSort(arr) 
-    print("Sorted array is: ", end="\n") 
+    print("Sorted array is: ", end="\n")    
     print(arr)
