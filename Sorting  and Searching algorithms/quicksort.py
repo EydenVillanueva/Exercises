@@ -3,6 +3,7 @@ def partition(array, low, high):
     pivot = array[high] #pivot
 
     for j in range(low,high):
+        print(j)
         #if current element is smaller that or equal to pivot
         if array[j] <= pivot:
             #increment index of smaller element
@@ -18,7 +19,7 @@ def quickSort(array, low, high):
 
         partition_index = partition(array,low,high)
 
-        quickSort(array, low,partition_index-1)
+        quickSort(array, low, partition_index-1)
         quickSort(array, partition_index+1, high)
 
 if __name__ == "__main__":
@@ -26,5 +27,4 @@ if __name__ == "__main__":
     n = len(array)
     quickSort(array,0,n-1)
     print("Sorted Array is: ")
-    for i in range(n):
-        print("%d" %array[i])
+    
