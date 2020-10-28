@@ -10,13 +10,13 @@ def flippingImage(matrix):
             else:
                 row[j] = 1
         matrix[i] = row
-    
+
     return matrix
 
 
 if __name__ == "__main__":
     print(flippingImage([
-        [1,1,0],
-        [1,1,0],
-        [1,1,0],
+        [1,1,1,0,0],
+        [1,1,0,1,0],
+        [1,1,0,1,0],
     ]))
