@@ -106,4 +106,7 @@ venv.bak/
 #visualstudio code cache
 .vscode/
 
+#jetbrains related
+.idea
+
 /__pycache__
